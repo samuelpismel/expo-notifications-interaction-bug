@@ -14,4 +14,8 @@ How to test:
 1. The response data should have appeared but it will not
 1. If you click in the reload button the response data will appear
 
+<p align="center">
+
 ![Debug App Image](https://github.com/samuelpismel/expo-notifications-interaction-bug/blob/master/assets/expo-notification-app-debug.png?raw=true)
+
+</p>
