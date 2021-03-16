@@ -26,6 +26,7 @@ Notifications.setNotificationHandler({
 export default class App extends React.Component {
 
   state = {
+    triggered: false,
     data: null,
   }
 
@@ -42,7 +43,10 @@ export default class App extends React.Component {
 
     const { data } = response?.notification?.request?.content;
 
-    this.setState({ data });
+    this.setState({
+      data,
+      triggered: true,
+    });
   };
 
   componentWillUnmount() {
@@ -83,9 +87,8 @@ export default class App extends React.Component {
         />
 
         <View>
-          <Text>Response data:</Text>
           <Text>
-            {JSON.stringify(this.state.data, null, 2)}
+            State: {JSON.stringify(this.state, null, 2)}
           </Text>
         </View>
 
